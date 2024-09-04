@@ -7,6 +7,4 @@ for i in range(a):
     arr = input()
     b = arr.count('b')
     c = arr.count('c')
-    print("Data Set " + str(i + 1) + ":")
-    print(x - b + c)
-    print()
+    print(f"Data Set {(i + 1)}:\n{x-b+c}")
