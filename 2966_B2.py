@@ -17,7 +17,6 @@ for i in range(n):
     if(arr[i] == Goran[i % len(Goran)]):
         Goran_num += 1
 
-
 print(max(Adrian_num,Bruno_num,Goran_num))
 
 if(max(Adrian_num,Bruno_num,Goran_num) == Adrian_num):
