@@ -1,4 +1,5 @@
 import sys
+sys.setrecursionlimit(10**6)
 input = sys.stdin.readline
 
 N = int(input())
@@ -21,4 +22,4 @@ def dfs(st):
 dfs(0)
 
 for i in range(1,N):
-    print(arr[i]+1,end=" ")
+    print(arr[i]+1)
