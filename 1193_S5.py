@@ -1,24 +1,18 @@
 N = int(input())
 
-L, R = 1,0
-LR = False
-for i in range(N):
-    if(i == 0):
-        R += 1
-        continue
-    elif(LR == False and L == 1):
-        LR = True
-        R += 1
-    elif(LR == True and R == 1):
-        LR = False
-        L += 1
-    elif(LR == False and L != 1):
-        L -= 1
-        R += 1
-    elif(LR == True and R != 1):
-        R -= 1
-        L += 1
+line = 1
+count = 1
 
-    
+while N > count:
+    line += 1
+    count += line
 
-print(f'{L}/{R}')
+position = N - (count - line)
+if line % 2 == 0:
+    a = position
+    b = line - position + 1
+else:
+    a = line - position + 1
+    b = position
+
+print(f"{a}/{b}")
