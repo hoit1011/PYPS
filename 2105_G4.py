@@ -1,14 +1,24 @@
-from itertools import combinations
-
-N,K = map(int,input().split())
+N , K = map(int,input().split())
 li = list(map(int,input().split()))
 
-cnt = 0
-for i in range(2,N):
-    for combination in combinations(li,i):
-        if sum(combination) == K:
-            print(combination)
-            cnt += 1
+psum = [0] * N
+psum[0] = li[0]
+for i in range (1,N):
+    psum[i] = psum[i-1] + li[i]
 
-print(cnt)
+answer = 0
+count = {}
 
+for i in range(N):
+    goal = psum[i] - K
+
+    if goal == 0:
+        answer += 1
+    if goal in count:
+        answer += count[goal]
+
+    if psum[i] not in count:
+        count[psum[i]] = 0
+    count[psum[i]] += 1
+
+print(answer)
