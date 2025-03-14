@@ -1,6 +1,6 @@
 S = input()
 
-cnt = 0
+cnt = 1
 
 for i in range(len(S)):
     if i == 0:
@@ -8,4 +8,4 @@ for i in range(len(S)):
     if S[i] != S[i-1]:
         cnt += 1
 
-print((cnt + 1) // 2)
+print(cnt // 2)
