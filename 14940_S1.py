@@ -39,4 +39,5 @@ for i in range(len(dist)):
             print("-1",end=' ')
         else:
             print(dist[i][j],end=' ')
+            
     print()
