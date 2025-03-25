@@ -1,7 +1,10 @@
+import sys
+input = sys.stdin.readline
+
 N = int(input())
 li = list(map(int,input().split()))
 li.sort()
-print(li)
+
 result = 1
 
 for i in range(N):
